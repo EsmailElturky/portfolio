@@ -1,5 +1,5 @@
 const skills = [
-  'Angular', 'TypeScript', 'RxJS', 'NGRX', 'Redux',
+  'Angular', 'React', 'Next.js', 'TypeScript', 'RxJS', 'NGRX', 'Redux',
   'HTML', 'CSS', 'SASS', 'Bootstrap', 'Angular Material',
   'Ant Design', 'PrimeNG', 'OOP', 'Domain Driven Design',
   'Unit Testing', 'Storybook'
