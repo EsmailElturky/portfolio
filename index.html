@@ -1,306 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Esmail Elturky — Senior Angular Developer portfolio. Experienced in building scalable web applications with a focus on UI/UX.">
-  <title>Esmail Elturky | Senior Angular Developer</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="description" content="Esmail Elturky — Senior Front-End Developer (Angular · React · Next.js). 6+ years building large-scale, role-based web applications, UI kits, form builders, real-time systems and SEO-ready Next.js products.">
+  <meta property="og:title" content="Esmail Elturky | Senior Front-End Developer">
+  <meta property="og:description" content="Angular · React · Next.js — large-scale, role-based web applications with clean architecture and strong UI/UX.">
+  <meta property="og:image" content="https://esmailelturky.github.io/portfolio/assets/profile.png">
+  <meta property="og:url" content="https://esmailelturky.github.io/portfolio/">
+  <meta name="theme-color" content="#0c0d11">
+  <title>Esmail Elturky | Senior Front-End Developer</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script>
+    // Apply the saved / system theme before first paint to avoid a flash.
+    (function () {
+      var theme;
+      try { theme = localStorage.getItem('theme'); } catch (e) {}
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80">
+<body>
 
   <!-- Navbar -->
-  <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#home">EE.</a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto gap-lg-2">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Esmail Elturky — home">
+        <span class="brand-mark">EE</span>
+        <span class="brand-text">Esmail Elturky</span>
+      </a>
+      <nav class="nav-links" id="navMenu" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle light / dark theme">
+          <i class="bi bi-sun theme-icon-light"></i>
+          <i class="bi bi-moon-stars theme-icon-dark"></i>
+        </button>
+        <a class="btn btn-sm btn-ghost d-none-sm" href="assets/Esmail_Elturky_CV.pdf" target="_blank" rel="noopener">
+          <i class="bi bi-file-earmark-arrow-down"></i> CV
+        </a>
+        <button class="icon-btn nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+          <i class="bi bi-list"></i>
+        </button>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero -->
-  <section id="home" class="hero-section d-flex align-items-center">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-7 order-2 order-lg-1">
-          <p class="hero-greeting fade-up">Hello, I'm</p>
-          <h1 class="hero-name fade-up delay-1">Esmail Elturky</h1>
-          <h2 class="hero-title fade-up delay-2">Senior Angular Developer</h2>
-          <p class="hero-desc fade-up delay-3">
-            I build scalable, role-based web applications with clean architecture,
-            strong UI/UX, and a focus on maintainable front-end systems.
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow reveal"><span class="status-dot"></span> Open to remote roles &amp; contracts</p>
+          <h1 class="hero-name reveal">Esmail<br><span>Elturky</span></h1>
+          <p class="hero-role reveal">Senior Front-End Developer</p>
+          <ul class="hero-stack reveal" aria-label="Main stack">
+            <li><i class="bi bi-triangle"></i> Angular</li>
+            <li><i class="bi bi-circle"></i> React</li>
+            <li><i class="bi bi-square"></i> Next.js</li>
+          </ul>
+          <p class="hero-desc reveal">
+            6+ years turning complex requirements into fast, intuitive interfaces —
+            from government platforms and form builders to SEO-ready Next.js products.
           </p>
-          <div class="hero-actions fade-up delay-4">
-            <a href="#contact" class="btn btn-primary btn-lg me-2 mb-2">Get In Touch</a>
-            <a href="#experience" class="btn btn-outline-light btn-lg mb-2">View Experience</a>
+          <div class="hero-actions reveal">
+            <a href="#work" class="btn btn-primary">See my work <i class="bi bi-arrow-right"></i></a>
+            <a href="#contact" class="btn btn-ghost">Get in touch</a>
           </div>
-          <div class="hero-social fade-up delay-5">
-            <a href="https://github.com/EsmailElturky" target="_blank" rel="noopener" aria-label="GitHub">
-              <i class="bi bi-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/esmailelturky" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <i class="bi bi-linkedin"></i>
-            </a>
-            <a href="mailto:en.esmailelturky@gmail.com" aria-label="Email">
-              <i class="bi bi-envelope"></i>
-            </a>
+          <div class="hero-social reveal">
+            <a href="https://github.com/EsmailElturky" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/esmail-elturky-29390618a/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:en.esmailelturky@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
           </div>
         </div>
-        <div class="col-lg-5 order-1 order-lg-2 text-center">
-          <div class="hero-image-wrap fade-up delay-2">
-            <div class="hero-image-ring"></div>
-            <img src="assets/profile.png" alt="Esmail Elturky" class="hero-image img-fluid">
-          </div>
-        </div>
-      </div>
-    </div>
-    <a href="#about" class="scroll-down" aria-label="Scroll down">
-      <i class="bi bi-chevron-down"></i>
-    </a>
-  </section>
 
-  <!-- About -->
-  <section id="about" class="section-padding">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-tag">About Me</span>
-        <h2 class="section-title">Professional Summary</h2>
-      </div>
-      <div class="row g-4">
-        <div class="col-lg-4 fade-up">
-          <div class="info-card h-100">
-            <i class="bi bi-geo-alt"></i>
-            <h5>Location</h5>
-            <p>Alexandria, Egypt</p>
-          </div>
-        </div>
-        <div class="col-lg-4 fade-up delay-1">
-          <div class="info-card h-100">
-            <i class="bi bi-mortarboard"></i>
-            <h5>Education</h5>
-            <p>B.Sc. Electro-mechanics — Excellent with Honor</p>
-          </div>
-        </div>
-        <div class="col-lg-4 fade-up delay-2">
-          <div class="info-card h-100">
-            <i class="bi bi-briefcase"></i>
-            <h5>Experience</h5>
-            <p>5+ years in Angular & full-stack development</p>
-          </div>
-        </div>
-        <div class="col-12 fade-up delay-1">
-          <div class="about-text">
-            <p>Experienced Angular developer with a strong focus on building intuitive, efficient user experiences. Skilled in HTML, CSS, and modern front-end architecture with proven ability to deliver large-scale applications.</p>
-            <p>Committed to clean code, SOLID principles, and continuous learning. Experienced in cross-functional collaboration, real-time systems, and reusable component libraries.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="section-padding bg-section">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-tag">Career</span>
-        <h2 class="section-title">Work History</h2>
-      </div>
-      <div class="timeline">
-
-        <article class="timeline-item fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
-              <div>
-                <h3>Angular Developer</h3>
-                <p class="company">Youxel Technology</p>
-                <span class="badge-job badge-fulltime">Full-time</span>
-              </div>
-              <span class="badge-date">09/2023 — Present</span>
+        <div class="hero-visual reveal">
+          <figure class="portrait">
+            <img src="assets/profile.png" alt="Esmail Elturky">
+          </figure>
+          <div class="code-card" aria-label="Profile summary as code">
+            <div class="code-card-bar">
+              <span></span><span></span><span></span>
+              <p>esmail.ts</p>
             </div>
-            <ul>
-              <li>Developed large-scale role-based apps: Survey Project, Form Builder, Inspection Project.</li>
-              <li>Built shared controls and directives for reactive & template-driven forms.</li>
-              <li>Integrated SignalR for real-time multi-session handling with offline support.</li>
-              <li>Established unit testing framework and documented systems with Storybook.</li>
+            <pre class="code"><code class="code-ghost" id="codeGhost" aria-hidden="true"></code><code class="code-typed" id="codeTyped"></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track" id="marqueeTrack"></div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat reveal"><strong data-count="6">0</strong><span>+ years shipping<br>front-end products</span></div>
+        <div class="stat reveal"><strong data-count="8">0</strong><span>live products<br>across 6 teams</span></div>
+        <div class="stat reveal"><strong data-count="3">0</strong><span>frameworks in<br>production</span></div>
+        <div class="stat reveal"><strong>AR/EN</strong><span>RTL · LTR, light<br>&amp; dark interfaces</span></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">01</span>
+          <div>
+            <p class="section-tag">About</p>
+            <h2 class="section-title">Interfaces that scale with the product.</h2>
+          </div>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a Senior Front-End Developer based in Alexandria, Egypt, building large-scale,
+              role-based web applications — primarily with <strong>Angular</strong>, and hands-on with
+              <strong>React</strong> and <strong>Next.js</strong>.
+            </p>
+            <p>
+              I've delivered reusable UI libraries, dynamic form builders, real-time systems and
+              payment workflows for enterprise and government clients. I care about SOLID principles,
+              clean architecture and components that the next developer is happy to reuse.
+            </p>
+            <ul class="about-facts">
+              <li><i class="bi bi-geo-alt"></i> Alexandria, Egypt · Remote</li>
+              <li><i class="bi bi-mortarboard"></i> B.Sc. Electro-Mechanics — Excellent with Honor</li>
+              <li><i class="bi bi-translate"></i> Arabic · English</li>
             </ul>
-            <div class="project-links">
-              <span class="project-links-label"><i class="bi bi-link-45deg"></i> Project</span>
-              <a href="https://www.youxel.com/products/check" target="_blank" rel="noopener">CHECK Platform</a>
-            </div>
           </div>
-        </article>
-
-        <article class="timeline-item fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
-              <div>
-                <h3>Angular Developer</h3>
-                <p class="company">Alternatives</p>
-                <span class="badge-job badge-parttime">Part-time</span>
-              </div>
-              <span class="badge-date">09/2025 — 04/2026</span>
-            </div>
-            <ul>
-              <li>Built a multi-role club management and booking system with online payments.</li>
-              <li>Designed a reusable UI Kit adopted across the application.</li>
-            </ul>
-            <div class="project-links">
-              <span class="project-links-label"><i class="bi bi-link-45deg"></i> Project</span>
-              <a href="https://ahmedalipodc.github.io/GameGuru_Front_Admin_MVP1/auth/let-start" target="_blank" rel="noopener">Club Management Admin</a>
-            </div>
+          <div class="services" id="servicesGrid">
+            <!-- Populated by JS -->
           </div>
-        </article>
-
-        <article class="timeline-item fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
-              <div>
-                <h3>Angular Developer</h3>
-                <p class="company">Data Boat</p>
-                <span class="badge-job badge-parttime">Part-time</span>
-              </div>
-              <span class="badge-date">03/2024 — 04/2025</span>
-            </div>
-            <ul>
-              <li>Led architecture for Ministry of Education web applications.</li>
-              <li>Built dynamic form builder and reusable NGX Table component.</li>
-              <li>Contributed to Ministry of Justice and National Museum of Oman projects.</li>
-            </ul>
-            <div class="project-links">
-              <span class="project-links-label"><i class="bi bi-link-45deg"></i> Projects</span>
-              <a href="https://judiciaryportal.databoat.app/" target="_blank" rel="noopener">Omani Military Judiciary</a>
-              <a href="https://booking.nm.gov.om/overview" target="_blank" rel="noopener">National Museum Booking</a>
-              <a href="https://gdupc.databoat.app/auth/sign-in" target="_blank" rel="noopener">GDUPC Portal</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="timeline-item fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
-              <div>
-                <h3>Full Stack Developer</h3>
-                <p class="company">Elham</p>
-                <span class="badge-job badge-fulltime">Full-time</span>
-              </div>
-              <span class="badge-date">12/2021 — 09/2023</span>
-            </div>
-            <ul>
-              <li>Front-end development with micro-frontend architecture and DDD principles.</li>
-              <li>Implemented NGRX state management and NG-ZORRO dashboard systems.</li>
-              <li>Maintained Django/DRF back-end with clean architecture practices.</li>
-            </ul>
-            <div class="project-links">
-              <span class="project-links-label"><i class="bi bi-link-45deg"></i> Project</span>
-              <a href="https://www.elham.sa/ar/products/lxp" target="_blank" rel="noopener">Elham LXP Platform</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="timeline-item fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
-              <div>
-                <h3>Angular Developer</h3>
-                <p class="company">Sakina</p>
-                <span class="badge-job badge-parttime">Part-time</span>
-              </div>
-              <span class="badge-date">02/2021 — 12/2021</span>
-            </div>
-            <ul>
-              <li>Built a full admin dashboard for a tourism company from scratch.</li>
-              <li>Selected and integrated UI library with SOLID component architecture.</li>
-            </ul>
-            <div class="project-links">
-              <span class="project-links-label"><i class="bi bi-link-45deg"></i> Project</span>
-              <a href="https://sakina.global/en" target="_blank" rel="noopener">Sakina Tourism Platform</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section-padding">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-tag">Expertise</span>
-        <h2 class="section-title">Skills & Technologies</h2>
-      </div>
-      <div class="row g-3" id="skillsGrid">
-        <!-- Populated by JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section-padding bg-section">
-    <div class="container">
-      <div class="section-header fade-up text-center">
-        <span class="section-tag">Contact</span>
-        <h2 class="section-title">Let's Work Together</h2>
-        <p class="section-subtitle mx-auto">Open to remote opportunities and freelance projects.</p>
-      </div>
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-4 fade-up">
-          <a href="mailto:en.esmailelturky@gmail.com" class="contact-card">
-            <i class="bi bi-envelope"></i>
-            <h5>Email</h5>
-            <p>en.esmailelturky@gmail.com</p>
-          </a>
-        </div>
-        <div class="col-md-4 fade-up delay-1">
-          <a href="tel:+201016396028" class="contact-card">
-            <i class="bi bi-telephone"></i>
-            <h5>Phone</h5>
-            <p>01016396028</p>
-          </a>
-        </div>
-        <div class="col-md-4 fade-up delay-2">
-          <a href="https://www.linkedin.com/in/esmailelturky" target="_blank" rel="noopener" class="contact-card">
-            <i class="bi bi-linkedin"></i>
-            <h5>LinkedIn</h5>
-            <p>Connect with me</p>
-          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer text-center">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Esmail Elturky. All rights reserved.</p>
-      <div class="footer-social">
-        <a href="https://github.com/EsmailElturky" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/esmailelturky" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-        <a href="mailto:en.esmailelturky@gmail.com"><i class="bi bi-envelope"></i></a>
+    <!-- Work -->
+    <section id="work" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">02</span>
+          <div>
+            <p class="section-tag">Selected work</p>
+            <h2 class="section-title">Live products I've helped build.</h2>
+          </div>
+        </div>
+        <div class="projects" id="projectsGrid">
+          <!-- Populated by JS -->
+        </div>
       </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">03</span>
+          <div>
+            <p class="section-tag">Experience</p>
+            <h2 class="section-title">Where I've worked.</h2>
+          </div>
+        </div>
+        <div class="xp reveal">
+          <div class="xp-tabs" id="xpTabs" role="tablist" aria-label="Companies">
+            <!-- Populated by JS -->
+          </div>
+          <div class="xp-panel" id="xpPanel" role="tabpanel" aria-live="polite">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">04</span>
+          <div>
+            <p class="section-tag">Skills</p>
+            <h2 class="section-title">The toolbox.</h2>
+          </div>
+        </div>
+        <div class="skills" id="skillsGrid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="contact-box reveal">
+          <p class="section-tag">05 — Contact</p>
+          <h2 class="contact-title">Have a product that needs<br>a sharp front end?</h2>
+          <p class="contact-sub">Open to remote opportunities, contracts and freelance projects.</p>
+          <div class="contact-email">
+            <a href="mailto:en.esmailelturky@gmail.com">en.esmailelturky@gmail.com</a>
+            <button class="icon-btn" id="copyEmail" type="button" aria-label="Copy email address">
+              <i class="bi bi-copy"></i>
+            </button>
+            <span class="copy-feedback" id="copyFeedback" role="status"></span>
+          </div>
+          <div class="contact-links">
+            <a href="tel:+201016396028"><i class="bi bi-telephone"></i> +20 101 639 6028</a>
+            <a href="https://www.linkedin.com/in/esmail-elturky-29390618a/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/EsmailElturky" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
+            <a href="assets/Esmail_Elturky_CV.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down"></i> Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Esmail Elturky</p>
+      <p class="footer-note">Hand-built with HTML, CSS &amp; vanilla JS.</p>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,12 +1,13 @@
 # portfolio
 
-Personal portfolio landing page for **Esmail Elturky** — Angular Developer.
+Personal portfolio for **Esmail Elturky** — Senior Front-End Developer (Angular · React · Next.js).
 
-Built with HTML, Bootstrap 5, and vanilla JavaScript.
+Built with plain HTML, CSS and vanilla JavaScript (no framework, no build step). Features light/dark theme,
+an interactive experience timeline, a typed code card, and scroll animations that respect `prefers-reduced-motion`.
 
 ## Live
 
-Enable GitHub Pages: **Settings → Pages → Source: master branch**.
+https://esmailelturky.github.io/portfolio/ — deployed by `.github/workflows/deploy-pages.yml` on every push to `master`.
 
 ## Local preview
 
@@ -22,6 +23,11 @@ npx serve .
 portfolio/
 ├── index.html
 ├── css/style.css
-├── js/main.js
-└── assets/profile.png
+├── js/main.js            # content data (projects, experience, skills) + interactions
+└── assets/
+    ├── profile.png
+    ├── favicon.ico
+    └── Esmail_Elturky_CV.pdf
 ```
+
+To update content, edit the data arrays at the top of `js/main.js`.
